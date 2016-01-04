@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="fileappender1" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/DBObject.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileappender2" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/master.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileappender3" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/signalWorker.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileappender4" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/dashWorker.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileappender5" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/formatWorker.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileappender6" class="org.apache.log4j.FileAppender">
+		<param name="File" value="/home/jangwee/log/output.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+
+	<logger name="logger4DBObject">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender1" />
+	</logger>
+
+	<logger name="logger4master">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender2" />
+	</logger>
+
+	<logger name="logger4signalworker">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender3" />
+	</logger>
+
+	<logger name="logger4dashworker">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender4" />
+	</logger>
+
+	<logger name="logger4formatworker">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender5" />
+	</logger>
+
+	<logger name="logger4output">
+		<level value="DEBUG" />
+		<appender-ref ref="fileappender6" />
+	</logger>
+
+	<root>
+		<priority value="debug" />
+	</root>
+</log4j:configuration>    

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 系统设置 -->
+<!-- 202.112.146.103  -->
+<system>
+	<MongoDB uri="mongodb://139.129.19.33:27017/" name="commlabDashMeasureData">
+		<collection type="dash" name="dashMeasureDatas">
+			<timeStamp>00000</timeStamp>
+		</collection>
+		<collection type="signal" name="signalMeasureDatas">
+			<timeStamp>00000</timeStamp>
+		</collection>
+	</MongoDB>
+</system>
